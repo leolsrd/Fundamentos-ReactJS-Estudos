@@ -1,0 +1,8 @@
+1 - Criando primeiro projeto react+vite
+npx create-vite my-react-app --template react .
+
+2 - Instalar as dependências
+npm install
+
+3 - Rodando o projeto
+npm run dev

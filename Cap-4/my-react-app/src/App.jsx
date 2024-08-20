@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import WelcomeClass from "./components/WelcomeClass";
+import WelcomeFunction from "./components/WelcomeFunction";
+import MeuComponente from "./components/MeuComponente";
+import { ComponenteA, ComponenteB } from "./components/ExportacaoNomeada";
+import { ComponenteA as PrimeiroComponente } from "./components/ExportacaoNomeada";
+import Cabecalho from "./components/Cabecalho";
+import Rodape from "./components/Rodape";
+import Container from "./components/Container";
+import Mensagem from "./components/Mensagem";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      {/* Componente de Classe */}
+      <WelcomeClass name="Joana" />
+      {/* Componente de Função */}
+      <WelcomeFunction name="Léo" />
+      {/* Exportando um componente */}
+      <MeuComponente />
+      {/* Exportação nomeada */}
+      <ComponenteA />
+      <ComponenteB />
+      {/* Usando alias ao importar */}
+      <PrimeiroComponente />
+      {/* Composição de componentes */}
+      <Container>
+        <Cabecalho />
+        <p>Esta é a minha primeira aplicação React!</p>
+        <Rodape />
+      </Container>
+      {/* Mensagem */}
+      <Mensagem texto="Olá, Mundo!" contador={3} />
+    </div>
+  );
 }
 
-export default App
+export default App;
