@@ -8,8 +8,18 @@ import Cabecalho from "./components/Cabecalho";
 import Rodape from "./components/Rodape";
 import Container from "./components/Container";
 import Mensagem from "./components/Mensagem";
+import ListaDeFrutas from "../../../Cap-3/my-react-app/src/components/ListaDeFrutas";
+import Botao from "./components/Botao";
 
 function App() {
+  const frutas = ["Maçã", "Banana", "Laranja"];
+
+  const pessoa = { nome: "João", idade: 30 };
+
+  function handleClick() {
+    alert("Botão calicado!");
+  }
+
   return (
     <div>
       {/* Componente de Classe */}
@@ -29,8 +39,12 @@ function App() {
         <p>Esta é a minha primeira aplicação React!</p>
         <Rodape />
       </Container>
-      {/* Mensagem */}
+      {/* Passando Strings e Números */}
       <Mensagem texto="Olá, Mundo!" contador={3} />
+      {/* Passando Array e Objetos */}
+      <ListaDeFrutas frutas={frutas} pessoa={pessoa} />
+      {/* Passando Funções */}
+      <Botao onClick={handleClick} />
     </div>
   );
 }
