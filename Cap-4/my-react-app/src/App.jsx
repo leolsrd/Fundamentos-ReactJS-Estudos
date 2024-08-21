@@ -10,15 +10,22 @@ import Container from "./components/Container";
 import Mensagem from "./components/Mensagem";
 import ListaDeFrutas from "../../../Cap-3/my-react-app/src/components/ListaDeFrutas";
 import Botao from "./components/Botao";
+import { useState } from "react";
 
 function App() {
+  const [texto, setTexto] = useState("Olá, Mundão!");
+
   const frutas = ["Maçã", "Banana", "Laranja"];
 
   const pessoa = { nome: "João", idade: 30 };
 
   function handleClick() {
-    alert("Botão calicado!");
+    alert("Botão clicado!");
   }
+
+  const handleChange = () => {
+    setTexto("Texto Alterado");
+  };
 
   return (
     <div>
@@ -45,6 +52,11 @@ function App() {
       <ListaDeFrutas frutas={frutas} pessoa={pessoa} />
       {/* Passando Funções */}
       <Botao onClick={handleClick} />
+      {/* Padrão de dados descendentes */}
+      <div>
+        <Mensagem texto={texto} />
+        <button onClick={handleChange}>Alterar Texto</button>
+      </div>
     </div>
   );
 }
