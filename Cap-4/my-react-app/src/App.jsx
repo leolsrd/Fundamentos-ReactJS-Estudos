@@ -11,6 +11,11 @@ import Mensagem from "./components/Mensagem";
 import ListaDeFrutas from "../../../Cap-3/my-react-app/src/components/ListaDeFrutas";
 import Botao from "./components/Botao";
 import { useState } from "react";
+import Saudacao from "./components/Saudacao";
+import User from "./components/User";
+import UserProfile from "./components/UserProfile";
+import NumberList from "./components/NumberList";
+import Button from "./components/Button";
 
 function App() {
   const [texto, setTexto] = useState("Olá, Mundão!");
@@ -18,6 +23,12 @@ function App() {
   const frutas = ["Maçã", "Banana", "Laranja"];
 
   const pessoa = { nome: "João", idade: 30 };
+
+  const userProfile = {
+    name: "Léo Lourenço",
+    email: "leolsrrd@gmail.com",
+    age: 41,
+  };
 
   function handleClick() {
     alert("Botão clicado!");
@@ -57,6 +68,16 @@ function App() {
         <Mensagem texto={texto} />
         <button onClick={handleChange}>Alterar Texto</button>
       </div>
+      {/* PropTypes */}
+      <Saudacao nome={"Léo Lourenço"} />
+      {/* PropTypes Tipos Primitivos */}
+      <User name={"Ana Clara"} age={37} />
+      {/* PropTypes Array */}
+      <UserProfile user={userProfile} />
+      {/* PropTypes de number (Tipos específicos) */}
+      <NumberList numbers={[1, 2, 3, 4]} />
+      {/* PropTypes Enum */}
+      <Button type="submit" />
     </div>
   );
 }
