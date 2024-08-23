@@ -5,6 +5,7 @@ function App() {
   return (
     <>
       <div>
+        {/* Exercício 1, 2, 3, e 4*/}
         <BemVindo />
       </div>
     </>
