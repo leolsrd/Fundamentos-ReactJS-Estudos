@@ -16,6 +16,7 @@ import User from "./components/User";
 import UserProfile from "./components/UserProfile";
 import NumberList from "./components/NumberList";
 import Button from "./components/Button";
+import SaudacaoValueDefault from "./components/SaudacaoValueDefault";
 
 function App() {
   const [texto, setTexto] = useState("Olá, Mundão!");
@@ -78,6 +79,8 @@ function App() {
       <NumberList numbers={[1, 2, 3, 4]} />
       {/* PropTypes Enum */}
       <Button type="submit" />
+      {/* PropTypes Value Default */}
+      <SaudacaoValueDefault />
     </div>
   );
 }
