@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # Não versionando arquivos JobDayCDS.txt
-JobDayCDS.txt
+JobCDS.txt
