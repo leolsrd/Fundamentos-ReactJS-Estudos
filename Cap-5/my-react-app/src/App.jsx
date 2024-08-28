@@ -1,33 +1,17 @@
-// import { useState } from "react";
+// ? Estudo direto da Documentação para entender mais sobre useState
 import "./App.css";
-import Alternador from "./components/Alterarnador";
-import Contador from "./components/Contador";
-import Dobrador from "./components/Dobrador";
-import FormularioCadastro from "./components/FormularioCadastro";
-import FormularioContato from "./components/FormularioContato";
-import Multiplicador from "./components/Multiplicador";
+import Counter from "./documentacao/Counter";
+import TextChange from "./documentacao/TextChange";
 
 function App() {
   return (
     <>
-      {/* Contador*/}
-      <Contador />
+      {/* Counter Click */}
+      <Counter />
+      {/* Text Change */}
       <br />
-      {/* Dobrador */}
-      <Dobrador />
       <br />
-      {/* Alternador */}
-      <Alternador />
-      <br />
-      {/* Multiplicador */}
-      <Multiplicador />
-      <br />
-      {/* Formulário de Cadastros */}
-      <FormularioCadastro />
-      <br />
-      {/* fomrulário de Contato */}
-      <FormularioContato />
-      <br />
+      <TextChange />
     </>
   );
 }
