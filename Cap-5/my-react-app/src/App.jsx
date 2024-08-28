@@ -12,16 +12,22 @@ function App() {
     <>
       {/* Contador*/}
       <Contador />
+      <br />
       {/* Dobrador */}
       <Dobrador />
+      <br />
       {/* Alternador */}
       <Alternador />
+      <br />
       {/* Multiplicador */}
       <Multiplicador />
+      <br />
       {/* Formulário de Cadastros */}
       <FormularioCadastro />
+      <br />
       {/* fomrulário de Contato */}
       <FormularioContato />
+      <br />
     </>
   );
 }

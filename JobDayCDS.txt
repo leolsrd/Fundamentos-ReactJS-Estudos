@@ -6,3 +6,5 @@ npm install
 
 3 - Rodando o projeto
 npm run dev
+
+-----------------------------------------------------
