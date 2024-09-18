@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 
-function DadosUsuario({ userId }) {
+function DadosUsuario({ userId = 1 }) {
   const [usuario, setUsuaruio] = useState(null);
 
   useEffect(() => {
