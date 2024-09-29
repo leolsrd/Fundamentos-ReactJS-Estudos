@@ -28,3 +28,35 @@
   margin: 8px;
   border-color: var(--darkReact);
 }
+
+/* ? Exercício 2 */
+.none {
+  display: none;
+}
+
+.show {
+  padding: 10px;
+  border-color: #ffffff;
+  border-radius: 4px;
+  border-width: 4px;
+  background-color: #ffffff;
+  color: #242424;
+}
+
+/* ? Exercício 3 */
+.lb-add-tarefa {
+  font-size: 1.3em;
+  color: #ffffff;
+}
+
+.add-lista {
+  margin: 4px;
+  padding: 12px;
+}
+
+.btn-add-tarefa {
+  margin: 4px;
+  background-color: #ffffff;
+  color: #242424;
+  border-radius: 4px;
+}
