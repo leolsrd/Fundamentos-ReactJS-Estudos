@@ -1,6 +1,30 @@
-.btn-tema {
-  background-color: #f1f1f1;
-  color: #1f1f1f;
+:root {
+  --white: #ffffff;
+  --darkReact: #242424;
+}
+
+.btn-theme {
+  background-color: var(--white);
+  color: var(--darkReact);
   border-radius: 4px;
   margin: 8px 0px;
+  border-color: var(--white);
+  border-width: 2px;
+}
+.themeColorDark {
+  background-color: var(--white);
+  color: var(--darkReact);
+  padding: 12px;
+  border-radius: 4px;
+  margin: 8px;
+  border-color: var(--white);
+}
+
+.themeColorWhite {
+  background-color: var(--darkReact);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 4px;
+  margin: 8px;
+  border-color: var(--darkReact);
 }
