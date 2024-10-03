@@ -1,7 +1,7 @@
 import "./App.css";
 import ExibirEvento from "./exercicios/ExibirEvento";
 import FormularioSubmit from "./exercicios/FormularioSubmit";
-import ComponenteExemplo from "./exercicios/TamanhoDaPagina";
+import TamanhoDaPagina from "./exercicios/TamanhoDaPagina";
 
 function App() {
   return (
@@ -10,8 +10,7 @@ function App() {
       <br />
       <FormularioSubmit />
       <br />
-      {/* <TamanhoDaPagina /> */}
-      <ComponenteExemplo />
+      <TamanhoDaPagina />
     </>
   );
 }
