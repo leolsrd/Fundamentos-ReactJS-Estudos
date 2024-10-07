@@ -1,18 +1,9 @@
+// * Usado para responder os exercícios.
+
 import "./App.css";
-import FormularioControlado from "./components/FormularioControlado";
-import FormularioEmail from "./components/FormularioEmail";
-import FormularioSelecao from "./components/FormularioSelecao";
 
 function App() {
-  return (
-    <>
-      <FormularioControlado />
-      <br />
-      <FormularioEmail />
-      <br />
-      <FormularioSelecao />
-    </>
-  );
+  return <></>;
 }
 
 export default App;
