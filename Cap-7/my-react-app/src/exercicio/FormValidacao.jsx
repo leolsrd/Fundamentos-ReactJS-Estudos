@@ -4,42 +4,56 @@ function FormValidacao() {
   const [erro, setErro] = useState("");
   const [nome, setNome] = useState("");
 
-  const validarNome = (nome) => {
-    console.log("Chegou na validação");
-    if (nome.trim() === "") {
-      const erroRetornado = "Nome não pode ser vazio";
-      setErro(erroRetornado);
-      return erroRetornado;
-    } else if (nome.trim() <= 2) {
-      const erroRetornado = "Nome tem que ter mais que 2 caracteres";
-      return erroRetornado;
-    } else if (nome.trim() === Number) {
-      const erroRetornado = "Nome não pode ter números";
-      return erroRetornado;
-    } else {
-      const erroRetornado = "";
-      return erroRetornado;
-    }
-  };
+  // const validarNome = () => {
+  //   console.log("Chegou na validação");
+  //   if (nome.trim() === "") {
+  //     const erroRetornado = "Nome não pode ser vazio";
+  //     console.log(erroRetornado);
+  //     setErro(erroRetornado);
+  //   } else if (nome.trim() <= 2) {
+  //     const erroRetornado = "Nome tem que ter mais que 2 caracteres";
+  //     console.log(erroRetornado);
+  //     setErro(erroRetornado);
+  //   } else if (nome.trim() === Number) {
+  //     const erroRetornado = "Nome não pode ter números";
+  //     console.log(erroRetornado);
+  //     setErro(erroRetornado);
+  //   } else {
+  //     const erroRetornado = "";
+  //     console.log(erroRetornado);
+  //     setErro(erroRetornado);
+  //   }
+  // };
 
   const handleChange = (e) => {
-    // validarNome(e.target.value);
-    validarNome(e.target.value);
     setNome(e.target.value);
-    console.log(`Erro change: ${erro}`);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Nome digitado: ${nome}`);
-    console.log(`Erros: ${erro}`);
+    console.log(`Erro submit: ${erro}`);
   };
 
-  const handleBlur = (e) => {
-    // validarNome(e.target.value);
-    // setErro(validarNome(e.target.value));
-    setNome(e.target.value);
-    console.log(`Erro: ${erro}`);
+  const handleBlur = () => {
+    console.log(`Nome Trim: ${nome.trim()}`);
+    if (nome.trim() === "") {
+      const erroRetornado = "Nome não pode ser vazio";
+      console.log(erroRetornado);
+      setErro(erroRetornado);
+    } else if (nome.length <= 2) {
+      const erroRetornado = "Nome tem que ter mais que 2 caracteres";
+      console.log(erroRetornado);
+      setErro(erroRetornado);
+    } else if (!isNaN(nome)) {
+      const erroRetornado = "Nome não pode ter números";
+      console.log(erroRetornado);
+      setErro(erroRetornado);
+    } else {
+      const erroRetornado = "";
+      console.log(erroRetornado);
+      setErro(erroRetornado);
+    }
   };
 
   return (
@@ -54,7 +68,7 @@ function FormValidacao() {
           value={nome}
           onBlur={handleBlur}
         />
-        <p>{erro}</p>
+        {erro && <p className="error-message">{erro}</p>}
       </label>
       <button type="submit">Enviar</button>
     </form>
