@@ -1,6 +1,16 @@
-import { Form } from "react-router-dom";
+import { Form, useLoaderData } from "react-router-dom";
+import { getContact } from "../contacts";
+
+/* eslint-disable react/prop-types */
+
+export async function loader({ params }) {
+  const contact = await getContact(params.contactId);
+  return { contact };
+}
 
 export default function Contact() {
+  const { contactNew } = useLoaderData();
+
   const contact = {
     first: "Your",
     last: "Name",
