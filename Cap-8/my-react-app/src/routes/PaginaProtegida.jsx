@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 
 function PaginaProtegida() {
   let navigate = useNavigate();
-  const estaAutenticado = true;
+  const estaAutenticado = false;
 
   useEffect(() => {
     if (!estaAutenticado) {
-      navigate("login");
+      navigate("/login");
     }
   }, [estaAutenticado, navigate]);
 
