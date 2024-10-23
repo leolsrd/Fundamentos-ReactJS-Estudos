@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav>
       <Link to="/">Home</Link> |<Link to="/app-default"> App Default</Link> |
-      <Link to="/usuarios"> Usuarios</Link>
+      <Link to="/usuarios"> Usuarios</Link> | <Link to="/login"> Login</Link>
     </nav>
   );
 };
