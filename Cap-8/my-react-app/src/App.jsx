@@ -1,28 +1,22 @@
 import { Outlet, useLocation } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import Navbar from "./exercicio/components/Navbar";
 
 function App() {
   let location = useLocation();
   const { pathname } = location;
 
-  console.log(location);
+  // ! Verificar melhor este retorno
+  // console.log(location);
 
   return (
     <>
       <Navbar />
       <div className="pagina-carregada">
         <h3>Página carregada {pathname}</h3>
+        <br />
         <Outlet />
       </div>
-      <br />
-      <br />
-      <h3>Corpo da página</h3>
-      <br />
-      <br />
-      <br />
-      <br />
-      <footer>Footer</footer>
     </>
   );
 }
