@@ -1,19 +1,29 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import "./Style.css";
-// * Importando o React Router DOM
 
 function App() {
+  let location = useLocation();
+  const { pathname } = location;
+
+  console.log(location);
+
   return (
-    <div className="App">
+    <>
       <Navbar />
-      <h1>Rotas</h1>
-      <Outlet />
-      <h2>
-        <p>Footer</p>
-      </h2>
-    </div>
+      <div className="pagina-carregada">
+        <h3>Página carregada {pathname}</h3>
+        <Outlet />
+      </div>
+      <br />
+      <br />
+      <h3>Corpo da página</h3>
+      <br />
+      <br />
+      <br />
+      <br />
+      <footer>Footer</footer>
+    </>
   );
 }
 
