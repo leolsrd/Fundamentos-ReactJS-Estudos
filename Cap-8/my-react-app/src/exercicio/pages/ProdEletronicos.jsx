@@ -7,7 +7,7 @@ function ProdEletronicos() {
   ];
 
   return (
-    <div className="prod-eletronicos">
+    <div className="prod-categorias">
       <h4>Produtos eletrônicos</h4>
       <ul>
         {prodEletronicos.map((value, index) => (

@@ -7,8 +7,8 @@ function ProdRoupas() {
   ];
 
   return (
-    <div className="prod-eletronicos">
-      <h4>Produtos eletrônicos</h4>
+    <div className="prod-categorias">
+      <h4>Produtos Vestuário</h4>
       <ul>
         {prodRoupas.map((value, index) => (
           <li key={index}>{value}</li>
