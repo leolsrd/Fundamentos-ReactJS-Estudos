@@ -2,10 +2,12 @@ import { Outlet, useNavigate, useParams } from "react-router-dom";
 import ProdEletronicos from "./ProdEletronicos";
 import ProdRoupas from "./ProdRoupas";
 import ProdAlimentos from "./ProdAlimentos";
+import CategoriasProdutos from "../components/CategoriasProdutos";
+CategoriasProdutos;
+import NavbarCategoriaProduto from "../components/NavbarCategoriaProduto";
 
 function ProdutosCategorias() {
   const { categoriaPath } = useParams();
-  console.log(`Param: ${categoriaPath}`);
 
   const navigate = useNavigate();
 
@@ -17,12 +19,14 @@ function ProdutosCategorias() {
     } else if (categoriaPath === "alimentos") {
       return <ProdAlimentos />;
     } else {
-      return navigate("/");
+      return navigate("/produtos/");
     }
   }
 
   return (
     <div className="produtos-categorias">
+      <h2>Categoria de Produtos</h2>
+      <NavbarCategoriaProduto />
       <Outlet />
       {carregarCategoria()}
     </div>
