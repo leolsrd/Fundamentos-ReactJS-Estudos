@@ -1,4 +1,4 @@
-let categoriasProdutos = [
+let CategoriasProdutos = [
   {
     id: 1,
     categoria: "Eletrônicos",
@@ -16,4 +16,4 @@ let categoriasProdutos = [
   },
 ];
 
-export default categoriasProdutos;
+export default CategoriasProdutos;

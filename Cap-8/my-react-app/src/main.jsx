@@ -8,6 +8,7 @@ import Sobre from "./exercicio/pages/Sobre.jsx";
 import Contato from "./exercicio/pages/Contato.jsx";
 import Produtos from "./exercicio/pages/Produtos.jsx";
 import ProdutosCategorias from "./exercicio/pages/ProdutosCategorias.jsx";
+import ProdDetails from "./exercicio/pages/ProdDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/produtos/:categoriaPath",
         element: <ProdutosCategorias />,
+      },
+      {
+        path: "/produtos-details/eletronicos/:id",
+        element: <ProdDetails />,
       },
     ],
   },

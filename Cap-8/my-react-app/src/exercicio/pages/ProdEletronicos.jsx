@@ -1,19 +1,22 @@
+import { Link } from "react-router-dom";
+import ProdEletronicosLista from "../components/ProdEletronicosLista";
+
 function ProdEletronicos() {
-  const prodEletronicos = [
-    "Notebook Dell 8GB de Ram e SSD 256",
-    "Celular S10 Lite 6GB de Ram 128 de Armazenamento",
-    "Kindle 128Gb",
-    "Teclado Mecânico Redragon Draconik",
-  ];
+  function montaRotaDetailsProduto(idProduto) {
+    let rotaMontada = "/produtos-details/eletronicos/" + idProduto;
+
+    return rotaMontada;
+  }
 
   return (
     <div className="prod-categorias">
       <h4>Produtos eletrônicos</h4>
-      <ul>
-        {prodEletronicos.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul>
+      {ProdEletronicosLista.map((e) => (
+        <Link to={montaRotaDetailsProduto(e.id)} key={e.id}>
+          {e.produto}
+          <br />
+        </Link>
+      ))}
     </div>
   );
 }

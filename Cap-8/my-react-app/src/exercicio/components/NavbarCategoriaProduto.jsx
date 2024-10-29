@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import categoriasProdutos from "./CategoriasProdutos";
+import CategoriasProdutos from "./CategoriasProdutos";
 
 function NavbarCategoriaProduto() {
   function montarRota(categoria) {
@@ -9,7 +9,7 @@ function NavbarCategoriaProduto() {
 
   return (
     <div>
-      {categoriasProdutos.map((e) => (
+      {CategoriasProdutos.map((e) => (
         <Link to={montarRota(e.categoriaPath)} key={e.id}>
           {e.categoria} {"| "}
         </Link>
