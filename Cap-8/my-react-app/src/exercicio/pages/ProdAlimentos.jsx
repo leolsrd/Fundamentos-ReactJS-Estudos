@@ -1,19 +1,25 @@
+import { Link } from "react-router-dom";
+import ProdAlimentosLista from "../components/ProdAlimentosLista";
+
 function ProdAlimentos() {
-  const prodAlimentos = [
-    "Cuscuz 500G Vitamilho",
-    "Carne de Sol 1kg",
-    "Cerveja Spaten 600ml ",
-    "Sarapatel Congelado",
-  ];
+  function montaRotaDetailsProduto(categoria, idProduto) {
+    console.log(`id: ${idProduto}`);
+    let rotaMontada = "/produtos-details/" + categoria + "/" + idProduto;
+    console.log(`Rota montada: ${rotaMontada}`);
+
+    return rotaMontada;
+  }
 
   return (
     <div className="prod-categoria">
       <h4>Produtos Alimentícios</h4>
-      <ul>
-        {prodAlimentos.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul>
+
+      {ProdAlimentosLista.map((e) => (
+        <Link to={montaRotaDetailsProduto(e.categoria, e.id)} key={e.id}>
+          {e.produto}
+          <br />
+        </Link>
+      ))}
     </div>
   );
 }

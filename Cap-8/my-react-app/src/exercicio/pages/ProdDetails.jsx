@@ -3,6 +3,8 @@ import ProdEletronicosLista from "../components/ProdEletronicosLista";
 
 function ProdDetails() {
   const { id } = useParams();
+  const { categoria } = useParams();
+  console.log(`Categoria Param: ${categoria}`);
 
   return (
     <div>

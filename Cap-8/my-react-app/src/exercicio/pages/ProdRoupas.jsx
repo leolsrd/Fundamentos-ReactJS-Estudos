@@ -1,19 +1,24 @@
+import { Link } from "react-router-dom";
+import ProdRoupasLista from "../components/ProdRoupasLista";
+
 function ProdRoupas() {
-  const prodRoupas = [
-    "Calça Jeans Azul 48",
-    "Camisa Polo Amarela GG",
-    "Calça Jeans Preta 60",
-    "Camisa Regata Speedo M",
-  ];
+  function montaRotaDetailsProduto(categoria, idProduto) {
+    console.log(`id: ${idProduto}`);
+    let rotaMontada = "/produtos-details/" + categoria + "/" + idProduto;
+    console.log(`Rota montada: ${rotaMontada}`);
+
+    return rotaMontada;
+  }
 
   return (
     <div className="prod-categorias">
       <h4>Produtos Vestuário</h4>
-      <ul>
-        {prodRoupas.map((value, index) => (
-          <li key={index}>{value}</li>
-        ))}
-      </ul>
+      {ProdRoupasLista.map((e) => (
+        <Link to={montaRotaDetailsProduto(e.categoria, e.id)} key={e.id}>
+          {e.produto}
+          <br />
+        </Link>
+      ))}
     </div>
   );
 }
