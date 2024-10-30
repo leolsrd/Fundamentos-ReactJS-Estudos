@@ -1,5 +1,5 @@
-import CategoriasProdutos from "../components/CategoriasProdutos";
-import NavbarCategoriaProduto from "../components/NavbarCategoriaProduto";
+import CategoriasProdutos from "../../data/services/CategoriasProdutos";
+import NavbarCategoriaProduto from "../../ui/components/NavbarCategoriaProduto";
 CategoriasProdutos;
 
 function Produtos() {

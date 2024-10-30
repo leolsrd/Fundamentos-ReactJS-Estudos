@@ -6,10 +6,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./exercicio/pages/Home.jsx";
 import Sobre from "./exercicio/pages/Sobre.jsx";
 import Contato from "./exercicio/pages/Contato.jsx";
-import Produtos from "./exercicio/pages/Produtos.jsx";
-import ProdutosCategorias from "./exercicio/pages/ProdutosCategorias.jsx";
-import ProdDetails from "./exercicio/pages/ProdDetails.jsx";
 import AreaAdministrativa from "./exercicio/pages/AreaAdministrativa.jsx";
+import Produtos from "./exercicio/pages/produtos/Produtos.jsx";
+import ProdutosCategorias from "./exercicio/pages/produtos/partials/ProdutosCategorias.jsx";
+import ProdDetails from "./exercicio/pages/produtos/partials/ProdDetails.jsx";
 
 const router = createBrowserRouter([
   {

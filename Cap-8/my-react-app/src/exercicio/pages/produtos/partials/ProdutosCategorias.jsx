@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
-import CategoriasProdutos from "../components/CategoriasProdutos";
-CategoriasProdutos;
-import NavbarCategoriaProduto from "../components/NavbarCategoriaProduto";
+import NavbarCategoriaProduto from "../../../ui/components/NavbarCategoriaProduto";
+import CategoriasProdutos from "../../../data/services/CategoriasProdutos";
 
 function ProdutosCategorias() {
   const { categoriaPath } = useParams();

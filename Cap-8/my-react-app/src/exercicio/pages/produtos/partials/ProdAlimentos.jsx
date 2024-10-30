@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ProdAlimentosLista from "../components/ProdAlimentosLista";
+import ProdAlimentosLista from "../../../data/services/ProdAlimentosLista";
 
 function ProdAlimentos() {
   function montaRotaDetailsProduto(categoria, idProduto) {

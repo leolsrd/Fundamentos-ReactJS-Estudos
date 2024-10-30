@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import CategoriasProdutos from "./CategoriasProdutos";
+import CategoriasProdutos from "../../data/services/CategoriasProdutos";
 
 function NavbarCategoriaProduto() {
   function montarRota(categoria) {

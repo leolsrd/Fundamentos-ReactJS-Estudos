@@ -1,6 +1,6 @@
-import ProdAlimentos from "../pages/ProdAlimentos";
-import ProdEletronicos from "../pages/ProdEletronicos";
-import ProdRoupas from "../pages/ProdRoupas";
+import ProdAlimentos from "../../pages/produtos/partials/ProdAlimentos";
+import ProdEletronicos from "../../pages/produtos/partials/ProdEletronicos";
+import ProdRoupas from "../../pages/produtos/partials/ProdRoupas";
 
 let CategoriasProdutos = [
   {

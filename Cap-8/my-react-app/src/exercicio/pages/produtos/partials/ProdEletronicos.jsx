@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import ProdRoupasLista from "../components/ProdRoupasLista";
+import ProdEletronicosLista from "../../../data/services/ProdEletronicosLista";
 
-function ProdRoupas() {
+function ProdEletronicos() {
   function montaRotaDetailsProduto(categoria, idProduto) {
     console.log(`id: ${idProduto}`);
     let rotaMontada = "/produtos-details/" + categoria + "/" + idProduto;
@@ -12,8 +12,8 @@ function ProdRoupas() {
 
   return (
     <div className="prod-categorias">
-      <h4>Produtos Vestuário</h4>
-      {ProdRoupasLista.map((e) => (
+      <h4>Produtos eletrônicos</h4>
+      {ProdEletronicosLista.map((e) => (
         <Link to={montaRotaDetailsProduto(e.categoria, e.id)} key={e.id}>
           {e.produto}
           <br />
@@ -23,4 +23,4 @@ function ProdRoupas() {
   );
 }
 
-export default ProdRoupas;
+export default ProdEletronicos;
