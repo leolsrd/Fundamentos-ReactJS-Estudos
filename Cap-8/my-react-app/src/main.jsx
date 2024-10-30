@@ -9,6 +9,7 @@ import Contato from "./exercicio/pages/Contato.jsx";
 import Produtos from "./exercicio/pages/Produtos.jsx";
 import ProdutosCategorias from "./exercicio/pages/ProdutosCategorias.jsx";
 import ProdDetails from "./exercicio/pages/ProdDetails.jsx";
+import AreaAdministrativa from "./exercicio/pages/AreaAdministrativa.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/produtos-details/eletronicos/:id",
         element: <ProdDetails />,
+      },
+      {
+        path: "/area-administrativa",
+        element: <AreaAdministrativa />,
       },
     ],
   },
