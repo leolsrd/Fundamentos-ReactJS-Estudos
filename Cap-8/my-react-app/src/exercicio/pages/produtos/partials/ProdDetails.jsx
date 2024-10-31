@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import ProdEletronicosLista from "../../../data/services/ProdEletronicosLista";
+import ProdutoLista from "../../../data/services/ProdutosLista";
 
 function ProdDetails() {
   const { id } = useParams();
@@ -9,13 +9,21 @@ function ProdDetails() {
   return (
     <div>
       <h3>Detalhes do produto</h3>
-      {ProdEletronicosLista.map((e) =>
-        e.id === Number(id) ? (
+      {ProdutoLista.map((e) =>
+        e.id === Number(id) && e.categoria === categoria ? (
           <div key={e.id}>
             <p>{e.produto}</p>
           </div>
         ) : null
       )}
+
+      {/* {ProdEletronicosLista.map((e) =>
+        e.id === Number(id) ? (
+          <div key={e.id}>
+            <p>{e.produto}</p>
+          </div>
+        ) : null
+      )} */}
     </div>
   );
 }
