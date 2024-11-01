@@ -9,6 +9,7 @@ function ProdDetails() {
   return (
     <div>
       <h3>Detalhes do produto</h3>
+
       {ProdutoLista.map((e) =>
         e.id === Number(id) && e.categoria === categoria ? (
           <div key={e.id}>
@@ -16,14 +17,6 @@ function ProdDetails() {
           </div>
         ) : null
       )}
-
-      {/* {ProdEletronicosLista.map((e) =>
-        e.id === Number(id) ? (
-          <div key={e.id}>
-            <p>{e.produto}</p>
-          </div>
-        ) : null
-      )} */}
     </div>
   );
 }
