@@ -4,7 +4,6 @@ import CategoriasProdutos from "../../../data/services/CategoriasProdutos";
 
 function ProdutosCategorias() {
   const { categoriaPath } = useParams();
-  console.log(categoriaPath);
 
   return (
     <div className="produtos-categorias">

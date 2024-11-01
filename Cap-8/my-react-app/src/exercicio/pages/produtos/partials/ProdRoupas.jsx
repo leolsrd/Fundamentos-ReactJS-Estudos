@@ -1,18 +1,20 @@
 import { Link } from "react-router-dom";
-import ProdRoupasLista from "../../../data/services/ProdRoupasLista";
 import CriarRotaProdutoDetails from "../../../utils/CriarRotaProdutoDetails";
+import ProdutoLista from "../../../data/services/ProdutosLista";
 
 function ProdRoupas() {
   return (
     <div className="prod-categorias">
       <h4>Produtos Vestuário</h4>
 
-      {ProdRoupasLista.map((e) => (
-        <Link to={CriarRotaProdutoDetails(e.categoria, e.id)} key={e.id}>
-          {e.produto}
-          <br />
-        </Link>
-      ))}
+      {ProdutoLista.map((e) =>
+        e.categoria === "roupas" ? (
+          <Link to={CriarRotaProdutoDetails(e.categoria, e.id)} key={e.id}>
+            {e.produto}
+            <br />
+          </Link>
+        ) : null
+      )}
     </div>
   );
 }
