@@ -7,9 +7,7 @@
  * @returns
  */
 function CriarRotaProdutoDetails(categoria, idProduto) {
-  console.log(`id: ${idProduto}`);
   let rotaMontada = "/produtos-details/" + categoria + "/" + idProduto;
-  console.log(`Rota montada: ${rotaMontada}`);
 
   return rotaMontada;
 }

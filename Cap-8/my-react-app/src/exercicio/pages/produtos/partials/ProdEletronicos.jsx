@@ -10,10 +10,12 @@ function ProdEletronicos() {
   function carregarProdutosCategoria() {
     ProdutoLista.map((e) => {
       if (e.categoria === "eletronicos") {
-        produtosCarregados.push();
+        produtosCarregados.push(e);
       }
     });
   }
+
+  console.log(carregarProdutosCategoria());
 
   return (
     <div className="prod-categorias">
