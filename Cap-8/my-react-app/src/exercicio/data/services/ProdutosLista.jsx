@@ -1,55 +1,57 @@
-import ProdAlimentos from "../../pages/produtos/partials/ProdAlimentos";
+// import ProdAlimentos from "../../pages/produtos/partials/ProdAlimentos";
 import ProdEletronicos from "../../pages/produtos/partials/ProdEletronicos";
 import ProdRoupas from "../../pages/produtos/partials/ProdRoupas";
 
 const ProdutoLista = [
-  // * Roupas
+  // * Alimentos
   {
     id: 1,
+    produto: "Cuscuz 500G Vitamilho",
+    categoria: "alimentos",
+    // element: <ProdAlimentos />,
+  },
+  {
+    id: 2,
+    produto: "Carne de Sol 1kg",
+    categoria: "alimentos",
+    // element: <ProdAlimentos />,
+  },
+  {
+    id: 3,
+    produto: "Cerveja Spaten 600ml",
+    categoria: "alimentos",
+    // element: <ProdAlimentos />,
+  },
+  {
+    id: 4,
+    produto: "Sarapatel Congelado",
+    categoria: "alimentos",
+    // element: <ProdAlimentos />,
+  },
+  // * Roupas
+  {
+    id: 5,
     produto: "Calça Jeans Azul 48",
     categoria: "roupas",
     element: <ProdRoupas />,
   },
   {
-    id: 2,
+    id: 6,
     produto: "Camisa Polo Amarela GG",
     categoria: "roupas",
     element: <ProdRoupas />,
   },
-
   {
-    id: 3,
+    id: 7,
     produto: "Calça Jeans Preta 60",
     categoria: "roupas",
     element: <ProdRoupas />,
   },
   {
-    id: 4,
+    id: 8,
     produto: "Camisa Regata Speedo M",
     categoria: "roupas",
     element: <ProdRoupas />,
-  },
-  // * Alimentos
-  {
-    id: 5,
-    produto: "Cuscuz 500G Vitamilho",
-    categoria: "alimentos",
-    element: <ProdAlimentos />,
-  },
-  {
-    id: 6,
-    produto: "Carne de Sol 1kg",
-    categoria: "alimentos",
-  },
-  {
-    id: 7,
-    produto: "Cerveja Spaten 600ml",
-    categoria: "alimentos",
-  },
-  {
-    id: 8,
-    produto: "Sarapatel Congelado",
-    categoria: "alimentos",
   },
   // * Eletrônicos
   {
