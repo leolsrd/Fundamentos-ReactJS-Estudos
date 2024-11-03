@@ -35,7 +35,9 @@ function App() {
       <br />
       <div>
         <h4>Login Context</h4>
-        <LoginContext.Provider value={(userName, setUserName, setShowProfile)}>
+        <LoginContext.Provider
+          value={{ setUserName, setShowProfile, userName }}
+        >
           {showProfile ? <Profile /> : <Login />}
         </LoginContext.Provider>
       </div>

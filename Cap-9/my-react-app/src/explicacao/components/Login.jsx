@@ -3,7 +3,6 @@ import { LoginContext } from "../contexts/LoginContext";
 
 function Login() {
   const { setUserName, setShowProfile } = useContext(LoginContext);
-  console.log(`User name: ${setUserName}`);
 
   const handleUsuario = (e) => {
     e.preventDefault();
