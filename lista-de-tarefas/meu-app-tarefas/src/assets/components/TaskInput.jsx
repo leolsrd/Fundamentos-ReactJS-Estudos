@@ -1,6 +1,7 @@
 import { useState } from "react";
+/* eslint-disable react/prop-types */
 
-function TaskInput() {
+function TaskInput({ onAddTask }) {
   const [task, setTask] = useState("");
 
   const handleSubmite = (e) => {
