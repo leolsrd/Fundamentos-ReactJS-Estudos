@@ -15,8 +15,6 @@ function reducer(state, action) {
 
 function Counter() {
   const [state, dispath] = useReducer(reducer, initialState);
-  console.log(`State ${state}`);
-  console.log(`Dispatch: ${dispath}`);
 
   return (
     <>

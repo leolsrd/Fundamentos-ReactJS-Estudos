@@ -1,4 +1,5 @@
 import { useState, useReducer } from "react";
+import React from "react";
 
 type Task = {
   id: number;
@@ -12,7 +13,7 @@ type Action =
   | { type: "remove"; id: number }
   | { type: "reset" };
 
-function reducer(state: Task[], action: Actin) {
+function reducer(state: Task[], action: Action) {
   switch (action.type) {
     case "add":
       return [...state, { id: Date.now(), text: action.text }];
