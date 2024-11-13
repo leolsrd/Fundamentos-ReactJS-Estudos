@@ -14,15 +14,17 @@ function TaskInput({ onAddTask }) {
   };
 
   return (
-    <form onSubmit={handleSubmite}>
-      <input
-        type="text"
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-        placeholder="Digite sua tarefa..."
-      />
-      <button type="submit">Adicionar</button>
-    </form>
+    <div className="TaskInput">
+      <form onSubmit={handleSubmite}>
+        <input
+          type="text"
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          placeholder="Digite sua tarefa..."
+        />
+        <button type="submit">Adicionar</button>
+      </form>
+    </div>
   );
 }
 

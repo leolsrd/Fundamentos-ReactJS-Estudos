@@ -37,10 +37,10 @@ function App() {
 
   return (
     <>
-      <div className="app">
+      <div className="App">
         <Header />
         <TaskInput onAddTask={handleAddTask} />
-        <div>
+        <div className="Filters">
           <button onClick={() => setFilter("all")}>Todas</button>
           <button onClick={() => setFilter("completed")}>Completas</button>
           <button onClick={() => setFilter("active")}>Ativas</button>
